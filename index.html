@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixIT IT Solution | IT Solutions & Software</title>
+
+    <meta name="description"
+          content="FixIT IT Solution provides practical IT solutions, software, networking and infrastructure tools.">
+
+    <meta name="author" content="FixIT IT Solution">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 20, 38, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 140, 255, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #d9e5f5;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #00c6ff;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(0, 174, 255, 0.18), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(0, 89, 255, 0.14), transparent 35%),
+                linear-gradient(135deg, #071525, #0b1f38 55%, #06284c);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            padding: 90px 25px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid rgba(0,198,255,0.35);
+            border-radius: 30px;
+            background: rgba(0,198,255,0.08);
+            color: #66d9ff;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #00c6ff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #c5d5e8;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            box-shadow: 0 8px 25px rgba(0, 125, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #41617f;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: #00c6ff;
+            color: #00c6ff;
+        }
+
+        /* Network illustration */
+
+        .network-card {
+            position: relative;
+            height: 360px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            background: rgba(255,255,255,0.045);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+            overflow: hidden;
+        }
+
+        .network-card::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: 1px solid rgba(0,198,255,0.25);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .network-card::after {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border: 1px solid rgba(0,198,255,0.25);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .server {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 70px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 0 35px rgba(0,198,255,0.4);
+        }
+
+        .node {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #102d4b;
+            border: 1px solid #2e7aa7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #66d9ff;
+            font-size: 12px;
+        }
+
+        .node.one { top: 45px; left: 80px; }
+        .node.two { top: 60px; right: 70px; }
+        .node.three { bottom: 50px; left: 65px; }
+        .node.four { bottom: 45px; right: 75px; }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading span {
+            color: #0072ff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            margin: 10px 0 12px;
+            color: #101c2e;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: auto;
+            color: #64748b;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about h3 {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .about p {
+            color: #607086;
+            margin-bottom: 16px;
+        }
+
+        .about-box {
+            padding: 35px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #edf7ff, #ffffff);
+            border: 1px solid #dceaf5;
+        }
+
+        .about-box h4 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+            color: #475569;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #0072ff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f5f8fc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 17px;
+            border: 1px solid #e3eaf2;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(20,60,100,0.08);
+            border-color: #b9dcf4;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 13px;
+            background: #e8f6ff;
+            color: #0072ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PRODUCT
+        ========================= */
+
+        .product {
+            background: white;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #071525, #0b2948);
+            color: white;
+            border-radius: 25px;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(0,198,255,0.07);
+            right: -100px;
+            top: -100px;
+        }
+
+        .product-label {
+            color: #66d9ff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .product-card h2 {
+            font-size: 45px;
+            margin: 10px 0 15px;
+        }
+
+        .product-card h2 span {
+            color: #00c6ff;
+        }
+
+        .product-card p {
+            color: #c2d2e3;
+            margin-bottom: 25px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .product-features li {
+            margin: 10px 0;
+            color: #d7e4f0;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            color: #00c6ff;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .calculator-preview {
+            position: relative;
+            background: #081827;
+            border: 1px solid #214763;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        .preview-title {
+            color: #8faec6;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .input-preview {
+            background: #102b43;
+            border: 1px solid #244d6d;
+            padding: 13px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: #cfe5f5;
+            font-family: monospace;
+        }
+
+        .result-preview {
+            margin-top: 18px;
+            padding: 15px;
+            background: rgba(0,198,255,0.06);
+            border: 1px solid rgba(0,198,255,0.15);
+            border-radius: 9px;
+            font-family: monospace;
+            color: #75dfff;
+            font-size: 13px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #f5f8fc;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 45px;
+            border-radius: 22px;
+            border: 1px solid #e0e8f0;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            color: #334155;
+            font-size: 14px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        /* =========================
+           PRIVACY
+        ========================= */
+
+        .privacy {
+            background: white;
+        }
+
+        .privacy-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .privacy-content h3 {
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        .privacy-content p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #061321;
+            color: #9db1c5;
+            padding: 35px 25px;
+        }
+
+        .footer-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #9db1c5;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #00c6ff;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-container,
+            .about-grid,
+            .product-card {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .network-card {
+                height: 300px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .product-card {
+                padding: 35px 25px;
+            }
+
+            .product-card h2 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 65px 18px;
+            }
+
+            nav {
+                padding: 0 18px;
+            }
+
+            .hero-container {
+                padding: 70px 18px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+    <nav>
+
+        <a href="#home" class="logo">
+            <div class="logo-icon">F</div>
+            FixIT
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div>
+
+            <div class="hero-badge">
+                IT Solutions • Software • Networking
+            </div>
+
+            <h1>
+                Practical IT.<br>
+                <span>Smarter Solutions.</span>
+            </h1>
+
+            <p>
+                FixIT IT Solution develops practical software and provides
+                technology solutions for networking, infrastructure,
+                system administration and everyday IT challenges.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    Explore Subnetify
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact FixIT
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="network-card">
+
+            <div class="server">
+                FIXIT
+            </div>
+
+            <div class="node one">IP</div>
+            <div class="node two">NET</div>
+            <div class="node three">IT</div>
+            <div class="node four">SYS</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>About Us</span>
+
+            <h2>Technology That Solves Problems</h2>
+
+            <p>
+                FixIT IT Solution focuses on practical, reliable and
+                easy-to-use technology solutions.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div>
+
+                <h3>Built for real-world IT</h3>
+
+                <p>
+                    FixIT IT Solution is focused on software, networking,
+                    infrastructure and system administration technologies.
+                </p>
+
+                <p>
+                    Our goal is simple: create useful tools and provide
+                    practical solutions that make IT work easier.
+                </p>
+
+                <p>
+                    From network calculations to infrastructure monitoring,
+                    FixIT focuses on solutions that are useful for IT
+                    professionals, administrators, students and technology
+                    enthusiasts.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h4>What we focus on</h4>
+
+                <ul class="about-list">
+
+                    <li>IT software and utilities</li>
+
+                    <li>Networking solutions</li>
+
+                    <li>System administration</li>
+
+                    <li>Infrastructure monitoring</li>
+
+                    <li>IT troubleshooting</li>
+
+                    <li>Practical technology projects</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Services</span>
+
+            <h2>IT Solutions & Services</h2>
+
+            <p>
+                Practical technology services designed around real
+                infrastructure and software needs.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">⌘</div>
+
+                <h3>Networking</h3>
+
+                <p>
+                    Network configuration, IP addressing, subnetting,
+                    troubleshooting and network infrastructure support.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">▣</div>
+
+                <h3>System Administration</h3>
+
+                <p>
+                    Windows and Linux system administration, configuration,
+                    troubleshooting and infrastructure management.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">◈</div>
+
+                <h3>Infrastructure Monitoring</h3>
+
+                <p>
+                    Monitoring solutions for servers, network devices,
+                    services and IT infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">⚙</div>
+
+                <h3>IT Automation</h3>
+
+                <p>
+                    Practical automation tools and scripts that simplify
+                    repetitive IT administration tasks.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">▤</div>
+
+                <h3>Software Solutions</h3>
+
+                <p>
+                    Lightweight software utilities designed to solve
+                    specific technical and business problems.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✓</div>
+
+                <h3>Technical Support</h3>
+
+                <p>
+                    Troubleshooting and technical assistance for common
+                    hardware, software and infrastructure challenges.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCT
+========================= -->
+
+<section class="product" id="products">
+
+    <div class="container">
+
+        <div class="product-card">
+
+            <div>
+
+                <div class="product-label">
+                    Featured Product
+                </div>
+
+                <h2>
+                    Sub<span>netify</span>
+                </h2>
+
+                <p>
+                    A simple and fast IP subnet calculator designed for
+                    IT professionals, network administrators, students
+                    and networking learners.
+                </p>
+
+
+                <ul class="product-features">
+
+                    <li>IPv4 subnet calculations</li>
+
+                    <li>CIDR support</li>
+
+                    <li>Network and broadcast addresses</li>
+
+                    <li>First and last usable host</li>
+
+                    <li>Usable host calculation</li>
+
+                    <li>Subnet mask information</li>
+
+                </ul>
+
+
+                <!-- Replace this link with your Uptodown app page
+                     after your app is published -->
+
+                <a href="#contact" class="btn btn-primary">
+                    Learn More
+                </a>
+
+            </div>
+
+
+            <div class="calculator-preview">
+
+                <div class="preview-title">
+                    SUBNETIFY — IP SUBNET CALCULATOR
+                </div>
+
+                <div class="input-preview">
+                    IP Address: 192.168.1.10
+                </div>
+
+                <div class="input-preview">
+                    CIDR: /24
+                </div>
+
+                <div class="result-preview">
+                    Network: 192.168.1.0<br><br>
+                    Broadcast: 192.168.1.255<br><br>
+                    First Host: 192.168.1.1<br><br>
+                    Last Host: 192.168.1.254<br><br>
+                    Usable Hosts: 254
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRIVACY POLICY
+========================= -->
+
+<section class="privacy" id="privacy">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Privacy</span>
+
+            <h2>Privacy Policy</h2>
+
+            <p>
+                Information about how FixIT applications handle user data.
+            </p>
+
+        </div>
+
+
+        <div class="privacy-content">
+
+            <p>
+                FixIT IT Solution respects your privacy. Our applications
+                are designed to provide useful functionality while
+                minimizing the collection of personal information.
+            </p>
+
+
+            <h3>Information Collection</h3>
+
+            <p>
+                Subnetify does not require users to create an account or
+                provide personal information to use the core subnet
+                calculation features.
+            </p>
+
+
+            <h3>IP Address Information</h3>
+
+            <p>
+                IP addresses entered into Subnetify are processed locally
+                on the device for calculation purposes. The application
+                does not send the entered IP address to a FixIT server
+                for processing.
+            </p>
+
+
+            <h3>Advertising</h3>
+
+            <p>
+                Subnetify may display advertisements using Google AdMob.
+                Advertising services may collect or use certain
+                information according to Google's applicable policies
+                and settings.
+            </p>
+
+
+            <h3>Information Sharing</h3>
+
+            <p>
+                FixIT IT Solution does not sell users' personal
+                information. Information handled by third-party services,
+                such as advertising providers, is governed by their
+                respective privacy policies.
+            </p>
+
+
+            <h3>Internet Access</h3>
+
+            <p>
+                Internet access may be required for advertising and
+                related third-party services. The main subnet calculation
+                functionality is designed to work locally on the device.
+            </p>
+
+
+            <h3>Policy Updates</h3>
+
+            <p>
+                This privacy policy may be updated when application
+                functionality or applicable requirements change.
+            </p>
+
+
+            <h3>Contact</h3>
+
+            <p>
+                For privacy-related questions, please contact FixIT IT
+                Solution through the contact information provided on
+                this website.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Contact FixIT IT Solution</h2>
+
+            <p>
+                Interested in our software or IT solutions?
+                Get in touch with us.
+            </p>
+
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+
+                    <strong>Email</strong>
+
+                    <!-- Replace with your real business email -->
+
+                    <span>contact@fixititsolution.com</span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Website</strong>
+
+                    <span>calebmersha.github.io</span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Focus</strong>
+
+                    <span>IT • Software • Networking</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            <div class="footer-brand">
+                FixIT IT Solution
+            </div>
+
+            <small>
+                © 2026 FixIT IT Solution. All rights reserved.
+            </small>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#products">Products</a>
+
+            <a href="#privacy">Privacy Policy</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
