@@ -1,1 +1,459 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Image Resizer — Compress Photos Easily | FixIT</title>
+
+  <meta name="description"
+    content="Discover Image Resizer by FixIT, an Android app designed to make image resizing and photo compression simple and convenient.">
+
+  <meta name="theme-color" content="#101827">
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #121c30;
+      --text: #f1f5f9;
+      --muted: #a8b4c8;
+      --accent: #60a5fa;
+      --border: #29364c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .container {
+      width: min(1060px, 92%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .back-link {
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.15;
+      margin: 14px 0;
+    }
+
+    h2 {
+      line-height: 1.25;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 18px auto;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 12px;
+      border-radius: 9px;
+      background: var(--accent);
+      color: #07111f;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .step, .info-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .step img {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      background: #080d18;
+    }
+
+    .step-content {
+      padding: 20px;
+    }
+
+    .step-number {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .step h3 {
+      margin: 6px 0;
+      font-size: 1.25rem;
+    }
+
+    .step p, .info-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .info-card {
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .developer-image {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      background: #080d18;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      background: var(--panel);
+      border-radius: 0 10px 10px 0;
+      color: var(--muted);
+      margin-top: 24px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      margin-top: 45px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding-top: 48px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">FixIT IT Solution</a>
+      <a class="back-link" href="/#projects">← All Projects</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">FixIT Android Project</div>
+        <h1>Image Resizer</h1>
+
+        <p class="lead">
+          Make image resizing and photo compression simpler.
+          Explore how Image Resizer helps you prepare images
+          for sharing, uploading, and everyday use.
+        </p>
+
+        <a class="button" href="#how-it-works">
+          Explore How It Works
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Why Image Compression Matters</h2>
+
+        <p>
+          Photos captured by modern smartphones can be several
+          megabytes in size. Large files can consume storage,
+          take longer to upload over slow connections, and exceed
+          file-size limits on websites and online forms.
+        </p>
+
+        <p>
+          Image compression reduces the amount of data required
+          to store an image. Depending on the compression method,
+          image dimensions, and quality settings, the resulting
+          file can be smaller while remaining suitable for its
+          intended purpose.
+        </p>
+
+        <div class="callout">
+          The goal is not always to create the smallest possible
+          image. It is to find a useful balance between file size
+          and visual quality.
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How Image Resizer Works</h2>
+
+        <p class="section-intro">
+          Follow the image-compression workflow, from choosing
+          an original photograph to reviewing the final result.
+        </p>
+
+        <div class="steps">
+          <article class="step">
+            <img
+              src="/assets/images/image-resizer/original.jpg"
+              alt="Original photograph before compression"
+              loading="lazy">
+
+            <div class="step-content">
+              <div class="step-number">Step 01</div>
+              <h3>Start With Your Original Photo</h3>
+              <p>
+                The example begins with an original photograph
+                measuring approximately 3 MB. Its size provides
+                a useful starting point for understanding why
+                image reduction can be helpful.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <img
+              src="/assets/images/image-resizer/interface1.jpg"
+              alt="Image selection screen in Image Resizer"
+              loading="lazy">
+
+            <div class="step-content">
+              <div class="step-number">Step 02</div>
+              <h3>Select an Image</h3>
+              <p>
+                Choose the photograph you want to process using
+                the image-selection interface. Starting with
+                the correct image makes the workflow simple
+                and straightforward.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <img
+              src="/assets/images/image-resizer/custom.jpg"
+              alt="Image size selection screen"
+              loading="lazy">
+
+            <div class="step-content">
+              <div class="step-number">Step 03</div>
+              <h3>Choose the Desired Size</h3>
+              <p>
+                Review the available size options and select
+                the target that suits your needs. A smaller
+                target may require stronger compression or
+                a reduction in image dimensions.
+              </p>
+            </div>
+          </article>
+
+          <article class="step">
+            <img
+              src="/assets/images/image-resizer/interface2.jpg"
+              alt="Final compressed image result"
+              loading="lazy">
+
+            <div class="step-content">
+              <div class="step-number">Step 04</div>
+              <h3>Review the Compressed Result</h3>
+              <p>
+                Check the resulting file size and inspect the
+                image quality. A smaller file can be easier
+                to upload, share, and store.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Who Can Benefit?</h2>
+
+        <div class="info-card">
+          <h3>Students and Job Applicants</h3>
+          <p>
+            Prepare images for online forms and submissions
+            when the destination specifies a file-size limit.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Everyday Smartphone Users</h3>
+          <p>
+            Create smaller copies of selected photographs
+            to make storage and sharing more manageable.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Small Businesses and Content Creators</h3>
+          <p>
+            Prepare image files for websites, online listings,
+            and digital communications.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Users With Limited Internet Data</h3>
+          <p>
+            Smaller files generally require less data to
+            transfer, depending on how and where they are used.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Meet the Developer</h2>
+
+        <p class="section-intro">
+          Image Resizer is part of the FixIT project collection,
+          focused on practical software tools that make everyday
+          technology tasks easier to manage.
+        </p>
+
+        <img
+          class="developer-image"
+          src="/assets/images/image-resizer/about.jpg"
+          alt="About and developer information in Image Resizer"
+          loading="lazy">
+
+        <p>
+          The About screen introduces the developer and the
+          purpose behind the application. FixIT aims to build
+          approachable tools that solve practical problems
+          through clear, focused software experiences.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>A Simpler Way to Manage Image Sizes</h2>
+
+        <p>
+          Image compression can help reduce storage requirements,
+          make file transfers more convenient, and prepare photos
+          for services with size restrictions. The right result
+          depends on the image, the selected settings, and the
+          requirements of its intended use.
+        </p>
+
+        <p>
+          Image Resizer by FixIT brings this common task into
+          an Android-focused workflow designed for everyday use.
+        </p>
+
+        <p>
+          <strong>Platform:</strong> Android<br>
+          <strong>Developer:</strong> FixIT<br>
+          <strong>Category:</strong> Image resizing and compression
+        </p>
+
+        <div class="callout">
+          Always check the final file size and image quality
+          before submitting an image to a website or application.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year">2026</span> FixIT IT Solution</p>
+      <a href="/">Home</a> ·
+      <a href="/#projects">Projects</a> ·
+      <a href="/#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+
